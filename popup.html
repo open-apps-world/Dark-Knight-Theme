@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Dark Theme Toolkit</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="header">
+        <h1>Dark Knight</h1>
+        <h5><i>Dark Theme Toolkit</i></h5>
+        <span class="version" id="version"></span>
+      </div>
+      <div class="site" id="site">Current site</div>
+
+      <div class="card">
+        <div class="scope-row">
+          <span class="scope-label">Apply to</span>
+          <div class="segmented" role="tablist">
+            <button type="button" class="seg" id="scope-tab" data-scope="tab" role="tab">Tab</button>
+            <button type="button" class="seg active" id="scope-domain" data-scope="domain" role="tab">Domain</button>
+          </div>
+        </div>
+        <label class="switch">
+          <input type="checkbox" id="toggle" />
+          <span class="slider"></span>
+          <span class="label" id="label">Dark mode off</span>
+        </label>
+        <div class="override hidden" id="override">
+          Tab override active
+          <button type="button" class="link" id="clear">Clear</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="section-head">
+          <span class="section-title">Eye comfort</span>
+          <button type="button" class="link" id="comfort-reset">Reset</button>
+        </div>
+        <p class="section-sub">Warm tint and dim glare — all sites.</p>
+
+        <div class="slider-row">
+          <label for="warmth">Warmth</label>
+          <input type="range" id="warmth" class="has-fill" min="0" max="60" step="5" value="0" />
+          <span class="val" id="warmth-val">0%</span>
+        </div>
+        <div class="slider-row">
+          <label for="dim">Dim</label>
+          <input type="range" id="dim" class="has-fill" min="0" max="40" step="5" value="0" />
+          <span class="val" id="dim-val">0%</span>
+        </div>
+      </div>
+
+      <p class="hint"><kbd>Ctrl/Cmd</kbd> <kbd>Shift</kbd> <kbd>D</kbd> toggles dark on this tab</p>
+    </div>
+    <script src="popup.js"></script>
+  </body>
+</html>
